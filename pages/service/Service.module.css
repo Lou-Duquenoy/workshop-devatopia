@@ -1,0 +1,176 @@
+.container {
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+}
+.container h2 {
+  font-size: 2.2rem;
+  margin-left: 7rem;
+  font-family: sans-serif;
+}
+.columny1 img {
+  width: 18rem;
+}
+.check {
+  width: 1.3rem;
+  margin-right: 1rem;
+}
+.options {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.columny1 {
+  margin-top: 3rem;
+  margin-right: 4rem;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 8rem;
+}
+.iconsTech {
+  background-color: white;
+  padding: 0.3rem 0.6rem;
+  width: 2.8rem;
+  margin-right: 1.5rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.firebase {
+  width: 2rem;
+}
+.row {
+  display: flex;
+  margin-bottom: 8rem;
+}
+.row p {
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  line-height: 1.8rem;
+  color: #878787;
+  margin-bottom: 1rem;
+}
+.row h2 {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  margin: 0;
+}
+.scrollContainer {
+  display: flex;
+}
+
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 8rem;
+  margin-bottom: 12rem;
+}
+
+.round {
+  background: #fafafa;
+  align-items: center;
+  padding: 1.8rem;
+  display: flex;
+  border-radius: 5rem;
+  border: 1px solid #a3a3a3;
+}
+.carouselContent {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  margin-left: 0.6rem;
+  width: 51%;
+  margin-right: 0.6rem;
+  margin: auto;
+}
+.Box {
+  width: 16rem;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  align-items: center;
+  padding-bottom: 4rem;
+  margin-right: 14rem;
+  padding-top: 6rem;
+}
+.BoxProject {
+  width: 100%;
+  margin-right: 23rem;
+}
+
+.phone {
+  width: 19rem;
+}
+.tablette {
+  width: 44rem;
+}
+.BoxVisible {
+  flex-shrink: 0; /* Prevent shrinking */
+  margin-right: 20px; /* Add margin between boxes */
+}
+.roundLeft {
+  margin-right: 3rem;
+}
+.roundRight {
+  margin-left: 3rem;
+}
+.BoxTop {
+  width: 8rem;
+  border-radius: 20rem;
+  position: relative;
+  bottom: 0rem;
+  top: 4rem;
+  left: 3rem;
+  background-color: #3f3d56;
+  padding: 1rem;
+}
+.Box h2 {
+  color: white;
+  margin: 0 1rem 0;
+  font-weight: 800;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.BoxGreen {
+  background-color: #12b09b;
+}
+.BoxPink {
+  background-color: #f695ac;
+}
+.BoxBlue {
+  background-color: #5bd7eb;
+}
+.roundLeft .carouselButton {
+  width: 0.7rem;
+  height: 0.7rem;
+  position: relative;
+  border-right: 0.2em solid black;
+  border-top: 0.2em solid black;
+  transform: rotate(-135deg);
+}
+.roundRight .carouselButton {
+  width: 0.7rem;
+  height: 0.7rem;
+  position: relative;
+  border-right: 0.2em solid black;
+  border-top: 0.2em solid black;
+  transform: rotate(45deg);
+}
+.Box p {
+  color: white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: sans-serif;
+}
+

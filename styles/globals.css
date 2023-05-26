@@ -1,0 +1,14 @@
+body::-webkit-scrollbar {
+    display: none; 
+}
+body{
+    background-color: #FAFAFA;
+    
+      
+}
+p{
+    margin: 0;
+}
+h2{
+    color: #707070;
+}

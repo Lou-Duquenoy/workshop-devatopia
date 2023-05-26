@@ -1,0 +1,145 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.description {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  font-size: 0.85rem;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  font-family: var(--font-mono);
+}
+.Box img {
+  width: 10.3rem;
+  border-radius: 20rem;
+  position: relative;
+  bottom: 5rem;
+}
+
+.Box h2 {
+  margin: -4rem 0 0.3rem 0;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+.Box p {
+  font-family: sans-serif;
+  color:#707070;
+}
+
+.BoxMiddle {
+  margin-bottom: 8rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  width: 51%;
+  margin: 0 auto;
+}
+
+.BoxMiddle h2,
+.BoxLeft h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  font-family: sans-serif;
+  margin-bottom: 1.3rem;
+}
+
+.Box {
+  width: 13.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.9rem;
+  padding-right: 1.9rem;
+  align-items: center;
+}
+.Box .bottomText {
+  margin-top: 0.7rem;
+  margin-bottom: 4rem;
+  line-height: 24px;
+}
+.BoxMiddle p,
+.BoxLeft p {
+  font-size: 1.4rem;
+  font-family: sans-serif;
+  line-height: 1.8rem;
+  color:#878787;
+}
+
+.BoxMiddle div {
+  display: flex;
+  justify-content: center;
+}
+.cta {
+  background: #12b09b;
+  padding: 0.8rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  color: white;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+.description a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.container {
+  margin-top: 8rem;
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+}
+.containerTop {
+  display: flex;
+  margin-bottom: 4rem;
+}
+.BoxLeft .Row {
+  display: flex;
+}
+.BoxLeft .rowText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.BoxLeft img {
+  width: 35rem;
+}
+.description p {
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba(var(--callout-rgb), 0.5);
+  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+  border-radius: var(--border-radius);
+}
+
+.code {
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(25%, auto));
+  width: var(--max-width);
+  max-width: 100%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
