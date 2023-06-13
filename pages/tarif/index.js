@@ -131,6 +131,28 @@ export default function Tarif() {
 
     console.log("Coût estimé:", totalPrice);
     setPrice(totalPrice);
+
+    const prices = {
+      platform: pricePerPlatform[data.platform],
+      device: pricePerDevice[data.device],
+      format: pricePerFormat[data.format],
+      design: pricePerDesign[data.design],
+      registration: pricePerRegistration[data.registration],
+      geolocation: pricePerGeolocation[data.geolocation],
+      media: pricePerMedia[data.media],
+      chat: pricePerChat[data.chat],
+      payment: pricePerPayment[data.payment],
+      iot: pricePerIoT[data.iot],
+      notifications: pricePerNotifications[data.notifications],
+      lists: pricePerLists[data.lists],
+      searchFilters: pricePerSearchFilters[data.searchFilters],
+      offline: pricePerOffline[data.offline],
+      advertising: pricePerAdvertising[data.advertising],
+      serverApi: pricePerServerApi[data.serverApi],
+      backOffice: pricePerBackOffice[data.backOffice],
+    };
+
+    console.log("Prices:", JSON.stringify(prices));
   };
 
   return (
