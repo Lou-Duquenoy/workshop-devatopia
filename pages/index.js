@@ -76,7 +76,7 @@ export default function Home() {
         </div>
       </section>
       <div id="container" className={styles.container}>
-        <div className={styles.row}>
+        <div id="row-1" className={styles.row}>
           <div className={styles.containerTop}>
             <div className={styles.Box}>
               <img src="Maxime.svg" />
@@ -116,7 +116,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={styles.row}>
+        <div id="row-2" className={styles.row}>
           <div className={styles.rowText}>
             <h2>Une équipe dédiée à votre projet</h2>
 
@@ -131,11 +131,11 @@ export default function Home() {
             <img src="desk.svg" />
           </div>
         </div>
-        <div className={styles.row}>
+        <div id="row-3" className={styles.row}>
           <div className={styles.columny1}>
             <img src="DMobile_Icon.svg" alt="" />
           </div>
-          <div >
+          <div>
             <h2>Un projet d'application mobile et/ ou web ?</h2>
             <p>
               Nous vous accompagnons dans toutes les étapes de votre projet.
@@ -178,7 +178,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={styles["row"] + " " + styles["rowService"]}>
+        <div id="row-4" className={styles["row"] + " " + styles["rowService"]}>
           <h2>
             Avez vous besoin d'un accompagnement complet sur-mesure ? Voici nos
             compétences :
@@ -327,7 +327,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={styles["row"] + " " + styles["rowContact"]}>
+        <div id="row-5" className={styles["row"] + " " + styles["rowContact"]}>
           <div className={styles.columny1}>
             <p>
               Besoin d'aide pour votre projet, d'un devis ? Contactez-nous !

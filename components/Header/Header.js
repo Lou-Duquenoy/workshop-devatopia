@@ -10,12 +10,21 @@ export default function Header({ children }) {
         <nav>
           <img src="Forme_NavBar.svg" className={styles.backgroundNav} />
           <ul>
-            <li><Link href="/">{"Équipe"}</Link></li>
-            <li><Link href="/techno">{"Technologies"}</Link></li>
-            <li><Link href="/service">{"Services"}</Link></li>
-            <li><Link href="/tarif">{"Tarifs"}</Link></li>
-            <li><Link href="/contact">{"Contact"}</Link></li>
-            
+            <li>
+              <Link href="#row-1">{"Équipe"}</Link>
+            </li>
+            <li>
+              <Link href="#row-2">{"Technologies"}</Link>
+            </li>
+            <li>
+              <Link href="#row-3">{"Services"}</Link>
+            </li>
+            <li>
+              <Link href="#row-4">{"Tarifs"}</Link>
+            </li>
+            <li>
+              <Link href="#row-5">{"Contact"}</Link>
+            </li>
           </ul>
         </nav>
       </div>
