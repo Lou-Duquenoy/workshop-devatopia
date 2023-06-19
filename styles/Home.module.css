@@ -6,34 +6,59 @@
   padding: 6rem;
   min-height: 100vh;
 }
-
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
-}
-.Box img {
-  width: 10.3rem;
-  border-radius: 20rem;
-  position: relative;
-  bottom: 5rem;
+/* LANDING TOP */
+.hero {
+  background-image: url(/_next/static/media/check.0658e006.png);
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 11rem;
+  color: #fff;
+  background-color: #12b09b;
 }
 
-.Box h2 {
-  margin: -4rem 0 0.3rem 0;
-  font-size: 1.2rem;
-  font-family: sans-serif;
-}
-.Box p {
-  font-family: sans-serif;
-  color:#707070;
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
+.hero p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.hero .btn {
+  font-size: 16px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+}
+.row {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.row p {
+  margin-bottom: 1rem;
+}
+
+/* TEAM */
+
+.container {
+  /* margin-top: 8rem; */
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+}
+.containerTop {
+  display: flex;
+  margin-bottom: 4rem;
+}
 .BoxMiddle {
   margin-bottom: 8rem;
   margin-left: 4rem;
@@ -41,13 +66,48 @@
   width: 51%;
   margin: 0 auto;
 }
-
 .BoxMiddle h2,
 .BoxLeft h2 {
-  font-size: 1.7rem;
-  font-weight: 700;
-  font-family: sans-serif;
   margin-bottom: 1.3rem;
+}
+.Box img {
+  width: 10.3rem;
+  border-radius: 20rem;
+  position: relative;
+  bottom: 5rem;
+}
+.cta {
+  background: #12b09b;
+  padding: 0.8rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  color: white;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+.Box h2 {
+  margin: -4rem 0 0.3rem 0;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+
+/* TECHNO  */
+
+.columny1 {
+  margin-top: 3rem;
+  margin-right: 4rem;
+}
+.columny1 img {
+  width: 18rem;
+}
+.check {
+  width: 1.3rem;
+  margin-right: 1rem;
+}
+
+.Box p {
+  font-family: sans-serif;
+  color: #707070;
 }
 
 .Box {
@@ -63,7 +123,6 @@
 }
 .Box .bottomText {
   margin-top: 0.7rem;
-  margin-bottom: 4rem;
   line-height: 24px;
 }
 .BoxMiddle p,
@@ -71,47 +130,65 @@
   font-size: 1.4rem;
   font-family: sans-serif;
   line-height: 1.8rem;
-  color:#878787;
+  color: #878787;
 }
 
 .BoxMiddle div {
   display: flex;
   justify-content: center;
 }
-.cta {
-  background: #12b09b;
-  padding: 0.8rem;
-  border-radius: 30px;
-  font-size: 1rem;
-  color: white;
-  font-family: sans-serif;
-  text-decoration: none;
-}
 
+.firebase {
+  width: 2rem;
+}
 .description a {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
 }
-.container {
-  margin-top: 8rem;
-  margin-left: 0.6rem;
-  margin-right: 0.6rem;
-}
-.containerTop {
-  display: flex;
-  margin-bottom: 4rem;
-}
-.BoxLeft .Row {
+.iconsTechContainer {
   display: flex;
 }
-.BoxLeft .rowText {
+
+.iconsTech {
+  background-color: white;
+  padding: 0.3rem 0.6rem;
+  width: 2.8rem;
+  margin-right: 1.5rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.phone {
+  width: 16rem;
+}
+.tablette {
+  width: 44rem;
+}
+.BoxVisible {
+  flex-shrink: 0; /* Prevent shrinking */
+  margin-right: 20px; /* Add margin between boxes */
+}
+
+.options {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.containerIconTech {
+  display: flex;
+  margin-top: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.rowText {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.BoxLeft img {
+.rowImage img {
   width: 35rem;
 }
 .description p {
@@ -122,17 +199,228 @@
   border: 1px solid rgba(var(--callout-border-rgb), 0.3);
   border-radius: var(--border-radius);
 }
-
 .code {
   font-weight: 700;
   font-family: var(--font-mono);
 }
 
-.grid {
+/* .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
   width: var(--max-width);
   max-width: 100%;
+} */
+
+/* SERVICES   */
+
+.scrollContainer {
+  display: flex;
+}
+
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 8rem;
+}
+
+.round {
+  background: #fafafa;
+  align-items: center;
+  padding: 1.8rem;
+  display: flex;
+  border-radius: 5rem;
+  border: 1px solid #a3a3a3;
+}
+.carouselContent {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  margin-left: 0.6rem;
+  width: 51%;
+  margin-right: 0.6rem;
+  margin: auto;
+}
+.carouselContent .Box {
+  width: 16rem;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  align-items: center;
+  padding-bottom: 4rem;
+  margin-right: 14rem;
+  padding: 6rem 0 4rem 0;
+}
+.BoxProject {
+  width: 100%;
+  margin-right: 23rem;
+}
+.rowService {
+  display: block !important;
+}
+.rowService h2 {
+  font-size: 2.2rem;
+  margin-left: 7rem;
+  font-family: sans-serif;
+}
+.phone {
+  width: 19rem;
+}
+.tablette {
+  width: 44rem;
+}
+.BoxVisible {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+.roundLeft {
+  margin-right: 3rem;
+}
+.roundRight {
+  margin-left: 3rem;
+}
+.BoxTop {
+  width: 8rem;
+  border-radius: 20rem;
+  position: relative;
+  bottom: 0rem;
+  top: 4rem;
+  left: 3rem;
+  background-color: #3f3d56;
+  padding: 1rem;
+}
+.carouselContent .Box h2 {
+  color: white;
+  margin: 0 1rem 0;
+  font-weight: 800;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.carouselContent .BoxGreen {
+  background-color: #12b09b;
+}
+.carouselContent .BoxPink {
+  background-color: #f695ac;
+}
+.carouselContent .BoxBlue {
+  background-color: #5bd7eb;
+}
+.roundLeft .carouselButton {
+  width: 0.7rem;
+  height: 0.7rem;
+  position: relative;
+  border-right: 0.2em solid black;
+  border-top: 0.2em solid black;
+  transform: rotate(-135deg);
+}
+.roundRight .carouselButton {
+  width: 0.7rem;
+  height: 0.7rem;
+  position: relative;
+  border-right: 0.2em solid black;
+  border-top: 0.2em solid black;
+  transform: rotate(45deg);
+}
+.carouselContent .Box p {
+  color: white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: sans-serif;
+}
+
+/* CONTACT */
+.rowContact {
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  justify-content: space-between;
+}
+.rowContact .columny1 {
+  width: 40%;
+}
+.rowContact .columny1 p {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: sans-serif;
+  margin-bottom: 1.3rem;
+  color: #878787;
+}
+.columny2 {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  background: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 31rem;
+}
+.columny2 input {
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  outline: none;
+  width: 36%;
+}
+.columny2 textarea {
+  border-top: none;
+  border-left: none;
+  font-size: 1.2rem;
+  padding-bottom: 4rem;
+  margin-bottom: 1.5rem;
+  border-right: none;
+  outline: none;
+  border-bottom: 2.3px solid #878787;
+}
+
+.rowForm {
+  display: flex;
+  justify-content: space-between;
+}
+.rowFormFull input {
+  width: 100%;
+}
+.conditions {
+  font-size: 1.2rem;
+  color: #878787;
+  font-family: sans-serif;
+}
+.radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #878787;
+  width: 15px;
+  height: 15px;
+  border-radius: 0;
+}
+.columny2 button {
+  background: #12b09b;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  width: 100%;
+  border-radius: 10px;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
 }
 
 @keyframes rotate {

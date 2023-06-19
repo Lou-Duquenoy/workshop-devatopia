@@ -67,9 +67,6 @@ export default function Service() {
     <>
       <div className={styles.container}>
         <div className={styles.BigRow}>
-          <div className={styles.row}>
-            
-          </div>
           <h2>
             Avez vous besoin d'un accompagnement complet sur-mesure ? Voici nos
             compétences :
@@ -175,7 +172,7 @@ export default function Service() {
                 <div>
                   <img
                     className={styles.tablette}
-                    src="tablette.svg"
+                    src="image 6.png"
                     alt="Image 2"
                   />
                 </div>
@@ -185,7 +182,7 @@ export default function Service() {
                 <div className={styles.BoxProject}>
                   <img
                     className={styles.phone}
-                    src="Mobile_One.svg"
+                    src="Calendrier Android 1.png"
                     alt="Image 2"
                   />
                 </div>
@@ -194,7 +191,7 @@ export default function Service() {
                 <div>
                   <img
                     className={styles.phone}
-                    src="Mobile_Two.svg"
+                    src="image 8.png"
                     alt="Image 2"
                   />
                 </div>
@@ -203,7 +200,7 @@ export default function Service() {
                 <div>
                   <img
                     className={styles.phone}
-                    src="Mobile_Three.svg"
+                    src="image 7.png"
                     alt="Image 2"
                   />
                 </div>
