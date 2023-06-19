@@ -135,7 +135,7 @@ export default function Home() {
           <div className={styles.columny1}>
             <img src="DMobile_Icon.svg" alt="" />
           </div>
-          <div className={styles.columny2}>
+          <div >
             <h2>Un projet d'application mobile et/ ou web ?</h2>
             <p>
               Nous vous accompagnons dans toutes les étapes de votre projet.

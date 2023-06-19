@@ -1,13 +1,16 @@
 import { Inter } from "next/font/google";
 import { useForm } from "react-hook-form";
+import { useState, useContext, useEffect, useRef } from "react";
 import styles from "./Tarif.module.css";
-import { useState } from "react";
+import { DataContext } from "../../components/Context";
 import "bootstrap/dist/css/bootstrap.min.css";
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Tarif() {
+export default function Tarif({ children }) {
+  const { sendMailModal, setSendMailModal, price, setPrice } =
+    useContext(DataContext);
+
   const { register, handleSubmit } = useForm();
-  const [price, setPrice] = useState();
 
   const onSubmit = (data) => {
     let totalPrice = 0;
@@ -153,7 +156,9 @@ export default function Tarif() {
     };
 
     console.log("Prices:", JSON.stringify(prices));
+    setSendMailModal(1);
   };
+
 
   return (
     <div className={styles.container}>
