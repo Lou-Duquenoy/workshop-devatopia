@@ -35,6 +35,6 @@ yarn-error.log*
 next-env.d.ts
 
 # ignore a specific file
-Layout.js
-Context.js
-/Modals
+/components/Layout.js
+/components/Context.js
+/components/Modals
