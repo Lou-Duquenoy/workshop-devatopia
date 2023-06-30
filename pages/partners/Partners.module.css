@@ -1,0 +1,96 @@
+.align-center {
+  text-align: center;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sheet {
+  margin: 0 auto;
+  /*max-width: 960px;*/
+  padding: 20px;
+}
+
+.layout {
+  display: flex;
+  align-items: center;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.size-60 {
+  flex-basis: 60%;
+}
+
+.size-30 {
+  flex-basis: 30%;
+}
+
+.container-style {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.container-layout h2 {
+  font-size: 1.6rem;
+}
+.container-layout p {
+  font-size: 1.4rem;
+}
+.text {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.custom-font {
+  font-family: "Your Custom Font", Arial, sans-serif;
+}
+
+.oswald {
+  font-family: "Oswald", Arial, sans-serif;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-grey-dark-1 {
+  border-color: #444;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #444;
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.rectangle {
+  border-radius: 0;
+}
+
+.button-style {
+  margin-top: 20px;
+}
+
+.image {
+  height: auto;
+}
+
+.image-contain {
+  object-fit: contain;
+}
+
+.image-default {
+  width: 11rem;
+}

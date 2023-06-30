@@ -1,6 +1,69 @@
-.container{
-    background: #3F3D56;
+.container {
+  background: #3f3d56;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.logo{
-    width: 14rem;
+.container p,
+.container a {
+  color: white;
+  font-size: 1.1rem;
+}
+.container h2 {
+  color: white;
+  font-size: 1.4rem;
+}
+.column {
+  margin-top: 1.7rem;
+}
+.container a {
+  text-decoration: underline;
+}
+.row {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 14rem;
+}
+.importantLinks div{
+    margin-right: 2rem;
+}
+.socialMedia {
+  color: white;
+  font-size: 1.7rem;
+}
+.socialMediaContainer{
+  display: flex;
+  margin-top: 2rem;
+}
+.socialMediaContainer  .socialMedia{
+    margin-right: 1rem;
+}
+.importantLinks {
+  display: flex;
+  margin-top: 2rem;
+}
+@media (max-width: 1000px) {
+  .container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .importantLinks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .importantLinks div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

@@ -1,25 +1,100 @@
-.formContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
-.formField{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem;
+.formField {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 100vw;
+  scroll-snap-align: center;
+  font-size: 24px;
 }
-.formLabel{
-    font-weight: bold;
+.formLabel {
+  font-weight: bold;
 }
-.formField img{
-    width: 8rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+.formField img {
+  width: 8rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
-.formCheck label{
-    margin-right: 1rem;
-    margin-left: 1rem;
+.checkboxContainer {
+  display: flex;
+}
+.formCheck label {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+.scrollContainer {
+  display: flex;
+}
+
+.carouselContainer {
+  display: flex;
+}
+.carouselContent {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+  margin: auto;
+}
+
+.carouselContent > div {
+  scroll-snap-align: center;
+  flex: 0 0 100%;
+}
+.carouselContent::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Optional: Customize scrollbar track appearance */
+.carouselContent::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Optional: Customize scrollbar thumb appearance */
+.carouselContent::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.round {
+  align-items: center;
+  padding: 1.8rem;
+  display: flex;
+  border-radius: 5rem;
+}
+.roundLeft {
+  margin-right: 10rem;
+}
+.roundLeft .carouselButton {
+  width: 0.7rem;
+  height: 0.7rem;
+  position: relative;
+  border-right: 0.2em solid black;
+  border-top: 0.2em solid black;
+  transform: rotate(-135deg);
+}
+.roundRight .carouselButton {
+  width: 0.7rem;
+  height: 0.7rem;
+  position: relative;
+  border-right: 0.2em solid black;
+  border-top: 0.2em solid black;
+  transform: rotate(45deg);
+}
+.roundContainer {
+  display: flex;
+  margin-top: 2rem;
+  border: 1px solid #a3a3a3;
+  border-radius: 30px;
+}
+.submitButton {
+  margin-top: 2rem;
 }

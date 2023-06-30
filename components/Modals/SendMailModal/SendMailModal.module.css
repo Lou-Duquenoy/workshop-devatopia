@@ -17,11 +17,12 @@
 }
 
 .modalContainer {
-  margin: 20rem auto;
+  margin: 13rem auto;
   width: 82%;
   padding: 2rem;
   background: rgb(255, 255, 255);
 }
 .modalContainer input{
-  margin-left: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }

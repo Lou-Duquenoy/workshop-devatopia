@@ -11,33 +11,6 @@ export default function Home() {
   const carouselRef = useRef(null);
   const carouselTestRef = useRef(null);
 
-  const handlePrevious = () => {
-    const container = carouselRef.current;
-    const scrollAmount = container.offsetWidth;
-
-    if (container.scrollLeft <= scrollAmount) {
-      // On the first two divs, show the last divs
-      container.scrollLeft = container.scrollWidth - container.offsetWidth;
-    } else {
-      container.scrollLeft -= scrollAmount;
-    }
-  };
-
-  const handleNext = () => {
-    const container = carouselRef.current;
-    const scrollAmount = container.offsetWidth;
-
-    if (
-      container.scrollLeft + container.offsetWidth >=
-      container.scrollWidth - scrollAmount
-    ) {
-      // On the last two divs, show the first div
-      container.scrollLeft = 0;
-    } else {
-      container.scrollLeft += scrollAmount;
-    }
-  };
-
   const handlePreviousTest = () => {
     const container = carouselTestRef.current;
     const scrollAmount = container.offsetWidth;
@@ -66,20 +39,11 @@ export default function Home() {
   };
   return (
     <>
-      <section className={styles.hero}>
-        <div className={styles.containerHero}>
-          <h1>Welcome to Your Landing Page</h1>
-          <p>This is the introductory section of your landing page.</p>
-          <a href="#container" className={styles.btn}>
-            Get Started
-          </a>
-        </div>
-      </section>
       <div id="container" className={styles.container}>
         <div id="row-1" className={styles.row}>
           <div className={styles.containerTop}>
-            <div className={styles.Box}>
-              <img src="Maxime.svg" />
+            <div className={styles["Box"] + " " + styles["BoxTeam"]}>
+              <img className={styles.teamImage} src="Maxime.svg" />
               <h2>Maxime Dehay</h2>
               <p>Associé gérant</p>
               <div className={styles.bottomText}>
@@ -98,13 +62,15 @@ export default function Home() {
                 le mieux à vos besoins. Un projet sur mesure !
               </p>
               <div>
-                <a className={styles.cta}>
+                <a href="#row-5" className={styles.cta}>
                   Parlons de votre projet autour d'un café
                 </a>
               </div>
+              <h2 className={styles.teamTitle}>Notre Equipe</h2>
             </div>
-            <div className={styles.Box}>
-              <img src="Alexandre.svg" />
+
+            <div className={styles["Box"] + " " + styles["BoxTeam"]}>
+              <img className={styles.teamImage} src="Alexandre.svg" />
               <h2>Alexandre Louis</h2>
               <p>Associé gérant</p>
               <div className={styles.bottomText}>
@@ -121,10 +87,10 @@ export default function Home() {
             <h2>Une équipe dédiée à votre projet</h2>
 
             <p>
-              Nous vous accompagnons dans la création, refonte ou amélioration
-              de votre application mobile ou Web. Nous vous aidons à donner vie
-              à vos idées ! Réalisons ensemble votre projet correspondant le
-              mieux à vos besoins. Un projet sur mesure !
+              Nous sommes basés dans le valenciennois et avons pour objectif de
+              répondre à vos besoins. Notre agence est spécialisée dans la
+              conception de vos applications web et mobile, mais aussi de votre
+              base de données. Pour finir, nous pouvons vous proposer des formations sur nos domaines d'expertise.
             </p>
           </div>
           <div className={styles.rowImage}>
@@ -179,99 +145,116 @@ export default function Home() {
           </div>
         </div>
         <div id="row-4" className={styles["row"] + " " + styles["rowService"]}>
-          <h2>
+          <h2 className={styles.BigTitle}>
             Avez vous besoin d'un accompagnement complet sur-mesure ? Voici nos
             compétences :
           </h2>
-          <div className={styles.carouselContainer}>
-            <div
-              className={styles["round"] + " " + styles["roundLeft"]}
-              onClick={handlePrevious}
-            >
-              <div className={styles.carouselButton}></div>
-            </div>
-            <div className={styles.carouselContent} ref={carouselRef}>
-              <div>
-                <div className={styles.BoxTop}>
-                  <img src="DMobile_Icon.svg" alt="Image 2" />
-                </div>
+          <div>
+            <div className={styles.BoxBigContainer}>
+              <div className={styles.BoxContainer}>
                 <div className={styles["Box"] + " " + styles["BoxBlue"]}>
-                  <h2>Développement mobile</h2>
-                  <p>
-                    Nous pouvons effectuer le développement de votre application
-                    mobile
-                  </p>
+                  <img
+                    className={styles.skillsIcon}
+                    src="DMobile_Icon.svg"
+                    alt="Image 2"
+                  />
+                  <div className={styles.bottomTextServices}>
+                    <h2>Développement mobile</h2>
+                    <p>
+                      Nous pouvons effectuer le développement de votre
+                      application mobile
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div>
-                <div className={styles.BoxTop}>
-                  <img src="DMobile_Icon.svg" alt="Image 2" />
-                </div>
+              <div className={styles.BoxContainer}>
                 <div className={styles["Box"] + " " + styles["BoxGreen"]}>
-                  <h2>Audit mobile</h2>
-                  <p>
-                    Nous pouvons effectuer un audit de votre application mobile
-                  </p>
-                </div>
-              </div>
-              <div>
-                <div className={styles.BoxTop}>
-                  <img src="DMobile_Icon.svg" alt="Image 2" />
-                </div>
-                <div className={styles["Box"] + " " + styles["BoxPink"]}>
-                  <h2>UI/UX Design</h2>
-                  <p>
-                    Nous pouvons effectuer les maquettes de vos sites web ou de
-                    vos applications mobiles{" "}
-                  </p>
-                </div>
-              </div>
-              <div>
-                <div className={styles.BoxTop}>
-                  <img src="DMobile_Icon.svg" alt="Image 2" />
-                </div>
-                <div className={styles["Box"] + " " + styles["BoxBlue"]}>
-                  <h2>Développement Back-end</h2>
-                  <p>
-                    Nous pouvons effectuer le développement de votre Back-end
-                  </p>
-                </div>
-              </div>
-              <div>
-                <div className={styles.BoxTop}>
-                  <img src="DMobile_Icon.svg" alt="Image 2" />
-                </div>
-                <div className={styles["Box"] + " " + styles["BoxGreen"]}>
-                  <h2>Méthodes de développement</h2>
-                  <p>
-                    Nous pouvons vous initier aux méthodes de base dans le
-                    domaine de la programmation
-                  </p>
-                </div>
-              </div>
-              <div>
-                <div className={styles.BoxTop}>
-                  <img src="DMobile_Icon.svg" alt="Image 2" />
-                </div>
-                <div className={styles["Box"] + " " + styles["BoxPink"]}>
-                  <h2>Méthodes de gestion de projets</h2>
-                  <p>
-                    Nous pouvons vous initier aux méthodes de gestion de projet
-                    (Agile, Cycle en V, ...)
-                  </p>
-                </div>
-              </div>
-            </div>
+                  <img
+                    className={styles.skillsIcon}
+                    src="DMobile_Icon.svg"
+                    alt="Image 2"
+                  />
 
-            <div
-              className={styles["round"] + " " + styles["roundRight"]}
-              onClick={handleNext}
-            >
-              <div className={styles.carouselButton}></div>
+                  <div className={styles.bottomTextServices}>
+                    <h2>Audit mobile</h2>
+                    <p>
+                      Nous pouvons effectuer un audit de votre application
+                      mobile
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.BoxContainer}>
+                <div className={styles["Box"] + " " + styles["BoxPink"]}>
+                  <img
+                    className={styles.skillsIcon}
+                    src="DMobile_Icon.svg"
+                    alt="Image 2"
+                  />
+
+                  <div className={styles.bottomTextServices}>
+                    <h2>UI/UX Design</h2>
+                    <p>
+                      Nous pouvons effectuer les maquettes de vos sites web ou
+                      de vos applications mobiles{" "}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.BoxContainer}>
+                <div className={styles["Box"] + " " + styles["BoxBlue"]}>
+                  <img
+                    className={styles.skillsIcon}
+                    src="DMobile_Icon.svg"
+                    alt="Image 2"
+                  />
+
+                  <div className={styles.bottomTextServices}>
+                    <h2>Développement Back-end</h2>
+                    <p>
+                      Nous pouvons effectuer le développement de votre Back-end
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.BoxContainer}>
+                <div className={styles["Box"] + " " + styles["BoxGreen"]}>
+                  <img
+                    className={styles.skillsIcon}
+                    src="DMobile_Icon.svg"
+                    alt="Image 2"
+                  />
+
+                  <div className={styles.bottomTextServices}>
+                    <h2>Méthodes de développement</h2>
+                    <p>
+                      Nous pouvons vous initier aux méthodes de base dans le
+                      domaine de la programmation
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.BoxContainer}>
+                <div className={styles["Box"] + " " + styles["BoxPink"]}>
+                  <img
+                    className={styles.skillsIcon}
+                    src="DMobile_Icon.svg"
+                    alt="Image 2"
+                  />
+
+                  <div className={styles.bottomTextServices}>
+                    <h2>Méthodes de gestion de projets</h2>
+                    <p>
+                      Nous pouvons vous initier aux méthodes de gestion de
+                      projet (Agile, Cycle en V, ...)
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <h2>Exemple de nos projets réalisés.</h2>
+          <h2 className={styles.BigTitle}>Exemple de nos projets réalisés.</h2>
           <div className={styles.carouselContainer}>
             <div
               className={styles["round"] + " " + styles["roundLeft"]}
@@ -329,16 +312,15 @@ export default function Home() {
         </div>
         <div id="row-5" className={styles["row"] + " " + styles["rowContact"]}>
           <div className={styles.columny1}>
-            <p>
-              Besoin d'aide pour votre projet, d'un devis ? Contactez-nous !
-            </p>
-            <p>
-              Pour nous appeler : du lundi au vendredi de 9h à 18h : +33 6 87 37
-              22 16
-            </p>
+            <p>Besoin d'aide pour votre projet, d'un devis ?</p>
+            <h2>Contactez-nous !</h2>
+            <p>Pour nous appeler : du lundi au vendredi de 9h à 18h :</p>
+            <div className={styles.ctaPhone}>
+              <a href="tel:+33687372216">+33687372216</a>
+            </div>
             <p>
               Pour nous contacter par mail, vous pouvez utiliser le formulaire
-              disponible sur notre site
+              disponible ci-dessous.
             </p>
           </div>
 

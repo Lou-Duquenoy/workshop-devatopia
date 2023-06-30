@@ -6,56 +6,21 @@
   padding: 6rem;
   min-height: 100vh;
 }
-/* LANDING TOP */
-.hero {
-  background-image: url(/_next/static/media/check.0658e006.png);
-  background-size: cover;
-  background-position: center;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 11rem;
-  color: #fff;
-  background-color: #12b09b;
-}
 
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-bottom: 40px;
-  color: white;
-}
-
-.hero .btn {
-  font-size: 16px;
-  padding: 12px 30px;
-  border-radius: 30px;
-  background-color: #fff;
-  color: #333;
-  text-decoration: none;
-}
 .row {
   display: flex;
   margin-bottom: 2rem;
 }
 .row p {
-  font-size: 1.3rem;
   font-family: sans-serif;
   line-height: 1.8rem;
   color: #878787;
-  margin-bottom: 1.6rem;
 }
 
 /* TEAM */
 
 .container {
-  /* margin-top: 8rem; */
+  margin-top: 8rem;
   margin-left: 0.6rem;
   margin-right: 0.6rem;
 }
@@ -72,13 +37,25 @@
 }
 .BoxMiddle h2,
 .BoxLeft h2 {
+  margin-top:2rem;
   margin-bottom: 1.3rem;
 }
-.Box img {
+.teamTitle {
+  display: none;
+}
+.Box .teamImage {
   width: 10.3rem;
   border-radius: 20rem;
   position: relative;
   bottom: 5rem;
+}
+.skillsIcon {
+  width: 8rem;
+  border-radius: 20rem;
+  position: relative;
+  bottom: 5rem;
+  background-color: #3f3d56;
+  padding: 1rem;
 }
 .cta {
   background: #12b09b;
@@ -99,7 +76,6 @@
 
 .columny1 {
   margin-top: 3rem;
-  margin-right: 4rem;
 }
 .columny1 img {
   width: 18rem;
@@ -110,12 +86,12 @@
 }
 
 .Box p {
+  font-size: 1rem;
   font-family: sans-serif;
   color: #707070;
 }
 
 .Box {
-  width: 13.5rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   background: #ffffff;
@@ -124,11 +100,34 @@
   padding-left: 1.9rem;
   padding-right: 1.9rem;
   align-items: center;
+  margin: auto;
+  width: 14rem;
+}
+.BoxTeam {
+  width: 13.5rem;
 }
 .Box .bottomText {
   margin-top: 0.7rem;
-  line-height: 24px;
+  margin-bottom: 2rem;
 }
+.bottomTextServices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bottomTextServices h2 {
+  font-weight: bold;
+  text-align: center;
+}
+.Box .bottomTextServices p,
+.Box .bottomTextServices h2 {
+  color: white;
+}
+.Box .bottomTextServices p {
+  margin-top: 1.7rem;
+  margin-bottom: 2.7rem;
+}
+
 .BoxMiddle p,
 .BoxLeft p {
   font-size: 1.4rem;
@@ -180,6 +179,9 @@
 .options {
   margin-left: 1rem;
   margin-top: 1rem;
+}
+.options p {
+  margin-bottom: 1rem;
 }
 .containerIconTech {
   display: flex;
@@ -269,7 +271,7 @@
 .rowService {
   display: block !important;
 }
-.rowService h2 {
+.BigTitle {
   font-size: 2.2rem;
   margin-left: 7rem;
   font-family: sans-serif;
@@ -309,13 +311,23 @@
   margin-bottom: 2rem;
   text-align: center;
 }
-.carouselContent .BoxGreen {
+.BoxBigContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8rem;
+}
+.BoxContainer {
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 8rem;
+}
+.BoxGreen {
   background-color: #12b09b;
 }
-.carouselContent .BoxPink {
+.BoxPink {
   background-color: #f695ac;
 }
-.carouselContent .BoxBlue {
+.BoxBlue {
   background-color: #5bd7eb;
 }
 .roundLeft .carouselButton {
@@ -346,18 +358,24 @@
 .rowContact {
   display: flex;
   align-items: center;
+  flex-direction: column;
   margin-left: 3rem;
   margin-right: 3rem;
   justify-content: space-between;
 }
 .rowContact .columny1 {
-  width: 40%;
+  width: 42rem;
+  text-align: center;
+}
+.rowContact h2 {
+  font-size: 2.2rem;
 }
 .rowContact .columny1 p {
   font-size: 1.6rem;
   font-weight: 700;
   font-family: sans-serif;
-  margin-bottom: 1.3rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
   color: #878787;
 }
 .columny2 {
@@ -412,7 +430,22 @@
   height: 15px;
   border-radius: 0;
 }
-.columny2 button {
+.ctaPhone a {
+  background: #12b09b;
+  color: white;
+  border: none;
+  font-size: 2.1rem;
+  width: 50%;
+  border-radius: 2rem;
+  padding-top: 0.6rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 0.6rem;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  
+}
+.buttonContainer button {
   background: #12b09b;
   color: white;
   border: none;
@@ -426,6 +459,105 @@
   display: flex;
   justify-content: center;
   margin-top: 1.5rem;
+}
+@media (max-width: 1000px) {
+  .Box {
+    margin: auto 0 auto auto;
+  }
+  .carouselContent{
+    width: 15rem!important;
+    overflow: scroll;;
+  } 
+  .container
+  .containerTop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .rowImage {
+    width: 23rem;
+    margin: 1rem auto;
+  }
+  .rowContact .columny1 {
+    width: 85%;
+    margin: auto;
+  }
+  .rowImage img {
+    width: 23rem;
+  }
+  .columny2 {
+    width: 95%;
+    margin: auto;
+  }
+  .BoxTeam {
+    width: auto;
+  }
+  .BoxMiddle {
+    order: -1;
+    grid-column: 1 / -1;
+    margin-bottom: 4rem;
+    width: 100%;
+  }
+  .BigTitle {
+    margin-left: 0;
+    font-size: 1.8rem;
+  }
+  .teamTitle {
+    display: block;
+  }
+  .tablette {
+    width: 15rem;
+  }
+  .phone{
+    width:8rem;
+  }
+  .row {
+    display: block;
+  }
+
+  .BoxTeam {
+    flex-basis: 50%;
+  }
+  .round {
+    display: none;
+  }
+  .carouselContent{
+    width:27rem;
+    overflow: scroll;
+  }
+  .roundLeft .carouselButton {
+    display: none;
+  }
+  .roundRight .carouselButton {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .Box {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  .Box h2 {
+    font-size: 1rem;
+  }
+  .Box p {
+    font-size: 0.8rem;
+  }
+  .BoxContainer {
+    flex-basis: calc(54.33% - 20px);
+  }
+  .containerTop {
+    grid-gap: 0;
+    gap: 0;
+  }
+  .BoxTeam {
+    width: 9.5rem;
+    margin: 0 auto;
+  }
+  
+  .teamImage {
+    width: 8.3rem;
+  }
 }
 
 @keyframes rotate {
